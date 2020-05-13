@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 70%;
+  margin: 0 auto;
+  background-color: cadetblue;
+  font-family: "Roboto Mono", serif;
+}
+
+/* -------------- Title of the Exam App --------------*/
+.title {
+  text-align: center;
+  font-family: Lato;
+  color: #01374e;
+  font-size: 25px;
+  padding: 10px 50px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+/* -------------- Main div of Exam App -------------- */
+.exam {
+  background-color: #01374e;
+  height: 450px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+/* -------------- Progress Bar -------------- */
+
+.progress {
+  height: 30px;
+  position: relative;
+  background: aliceblue;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  background-color: #01374e;
+  text-align: center;
+  color: aliceblue;
+  padding-top: 5px;
+}
+
+/* -------------- Questions -------------- */
+
+.question {
+  height: 50px;
+  margin-top: 5px;
+  font-size: 20px;
+  color: aliceblue;
+  padding-top: 10px;
+  padding-left: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Roboto Mono";
+}
+
+hr {
+  border: 0.3px solid rgb(166, 165, 177);
+  opacity: 0.2;
+}
+
+/* -------------- Answers -------------- */
+
+.answer {
+  height: 240px;
+  margin-top: 30px;
+  font-size: 14px;
+  color: aliceblue;
+  padding-top: 10px;
+  padding-left: 5px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ----------- Buttons --------------*/
+
+.ThreeBtn {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.ThreeBtn > button,
+.ThreeBtn > div > button {
+  height: 30px;
+  width: 70px;
+  border-radius: 5%;
+  cursor: pointer;
+  border: 0;
+}
+
+/* -------------- Ans type 1,4 -------------- */
+
+.type1 > label {
+  float: left;
+}
+
+.type1 > input {
+  float: left;
+  height: 60px;
+  width: 99%;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 2px;
+  background: #cad9da;
+}
+
+.type4 > label {
+  float: left;
+  font-size: 14px;
+  font-family: "Roboto Mono";
+  margin-bottom: 15px;
+}
+
+.type4 > textarea {
+  width: 100%;
+  border-radius: 5px;
+  background: #cad9da;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* -------------- Ans type 2,3 -------------- */
+
+.type2 > label {
+  font-size: 14px;
+}
+
+.options {
+  text-align: left;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  padding-left: 20px;
+}
+
+/* --------- AnsScript ---------- */
+
+.AnsScript {
+  font-family: Lato;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.AlAnswers {
+  padding: 10px;
+  padding-right: 50px;
+}
+
+.score {
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.score > div > div > input {
+  height: 30px;
+  padding: 10px;
+  border: 0;
+  border-radius: 2px;
+}
+
+.checkBtn {
+  height: 30px;
+  margin-top: 40px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.backQuiz {
+  margin-left: 20px;
+}
+
+.marks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.marks > div > input {
+  margin-top: 10px;
+  background-color: #cad9da;
+}
+
+/* ----------- Hiding Items ------------ */
+
+.submit {
+  display: none;
+}
+
+.AnsScript {
+  display: none;
+}
+
+.progress,
+.exam {
+  display: none;
+}
+
+/* Naming class */
+
+.NameClass {
+  background-color: #01374e;
+  height: 450px;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.NameClass > h4 {
+  height: 20px;
+  font-size: 20px;
+  color: aliceblue;
+  padding-top: 10px;
+  padding-left: 5px;
+  margin-top: 60px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-family: "Roboto Mono";
+}
+
+.NameClass > input {
+  height: 50px;
+  width: 50%;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 2px;
+  display: block;
+  margin: 0 auto;
+  background: #cad9da;
+}
+
+.NameClass > button {
+  height: 30px;
+  width: 70px;
+  border-radius: 5%;
+  cursor: pointer;
+  border: 0;
+  margin-top: 30px;
+}
+
+#resultName {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "PT Sans";
+}
+
+/* Right wrong status */
+
+#rightAns {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  margin-left: 25px;
+}
+
+#wrongAns {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  margin-left: 25px;
+}
+
+#partialAns {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a3b3b;
+  margin-left: 25px;
+}

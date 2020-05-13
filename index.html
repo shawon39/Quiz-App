@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|PT+Sans|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b5da2e7b52.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Exam App</title>
+  </head>
+  <body>
+    <h1 class="title">Online Quiz Exam</h1>
+    <div class="progress">
+      <span id="progress" style="width: 50%;">50%</span>
+    </div>
+
+    <div class="NameClass">
+      <h4 for="Ans"> <i class="fas fa-user-graduate"></i> Enter Your Name</h4>
+      <br />
+      <input type="text" id="yourName" />
+      <button class="yourName" onclick="EnterName()">Start</button>
+    </div>
+
+    <div class="exam">
+      <div id="question" class="question"></div>
+      <hr />
+      <div class="type1 answer">
+        <label for="Ans">Write the correct ans</label>
+        <br />
+        <input type="text" id="firstAns" name="ans" />
+      </div>
+      <div class="type2 answer">
+        <label for="Ans">Choose the correct ans</label>
+        <hr />
+        <br />
+        <div class="options">
+          <div>
+            <input type="radio" id="radio1" name="choice" value="" />
+            <label for="Answer" id="radioLabel1"></label>
+          </div>
+          <div>
+            <input type="radio" id="radio2" name="choice" value="" />
+            <label for="Answer" id="radioLabel2"></label>
+          </div>
+          <div>
+            <input type="radio" id="radio3" name="choice" value="" />
+            <label for="Answer" id="radioLabel3"></label>
+          </div>
+          <div>
+            <input type="radio" id="radio4" name="choice" value="" />
+            <label for="Answer" id="radioLabel4"></label>
+          </div>
+
+          <div>
+            <input type="radio" id="radio5" name="choice" value="" />
+            <label for="Answer" id="radioLabel5"></label>
+          </div>
+        </div>
+      </div>
+      <div class="type3 answer">
+        <label for="Ans">
+          Choose the correct ans. ( Correct ans can be once more )
+        </label>
+        <hr />
+        <br />
+        <div class="options">
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox1"
+              name="CheckBoxChoice"
+              value=""
+            />
+            <label for="Answer" id="checkboxLabel1"></label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox2"
+              name="CheckBoxChoice"
+              value=""
+            />
+            <label for="Answer" id="checkboxLabel2"></label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox3"
+              name="CheckBoxChoice"
+              value=""
+            />
+            <label for="Answer" id="checkboxLabel3"></label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox4"
+              name="CheckBoxChoice"
+              value=""
+            />
+            <label for="Answer" id="checkboxLabel4"></label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="checkbox5"
+              name="CheckBoxChoice"
+              value=""
+            />
+            <label for="Answer" id="checkboxLabel5"></label>
+          </div>
+        </div>
+      </div>
+      <div class="type4 answer">
+        <label for="Ans">Write your Ans below</label>
+        <textarea id="BroadQuestion" name="ans" rows="10"></textarea>
+      </div>
+      <hr />
+      <div class="ThreeBtn">
+        <button class="reset" onClick="window.location.reload();">Reset</button>
+        <button class="submit" onclick="answerScriptFun()">Finish</button>
+        <button class="next" onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+    <div class="AnsScript">
+      <div class="AlAnswers">
+        <div>
+          <h4 id="Question1"></h4>
+          <label id="Answer1"></label>
+        </div>
+        <div>
+          <h4 id="Question2"></h4>
+          <label id="Answer2"></label>
+        </div>
+        <div>
+          <h4 id="Question3">3. What is your name ?</h4>
+          <label id="Answer3"></label>
+        </div>
+        <div>
+          <h4 id="Question4">4. What is your name ?</h4>
+          <label id="Answer4"> </label>
+        </div>
+      </div>
+      <div class="score">
+        <h3 id="resultName"></h3>
+        <h3 id="score"></h3>
+        <h5>Each question will carry 10 marks</h5>
+        <div class="marks">
+          <div>
+            <label>1st Question score :</label>
+            <input type="text" id="firstScore" name="firstAnswer" />
+          </div>
+          <div>
+            <label>4th Question score :</label>
+            <input type="text" id="fourthScore" name="forthAnswer" />
+          </div>
+        </div>
+        <button class="checkBtn" onclick="grandTotal()">Grand Total</button>
+        <button class="checkBtn backQuiz" onClick="window.location.reload();">
+          Back to quiz
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
